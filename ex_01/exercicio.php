@@ -2,6 +2,7 @@
 
 $num_adv = random_int(0, 100);
 $pontuacao = 100;
+$resposta = "SIM";
 
 do{
     $numero = (int) readline("Informe um número: ");
@@ -20,10 +21,16 @@ do{
         }
 
         if($numero == $num_adv){
-            echo "Parabéns você acertou :)\nSua pontuação final foi: ".$pontuacao."/100.\n";                    
+            echo"----------------------------------------------------------------\n";
+            echo "Parabéns você acertou :)\nSua pontuação final foi: ".$pontuacao."/100.\n"; 
+            echo"----------------------------------------------------------------\n";
+
+            $resposta = strToUpper(readline("Deseja jogar novamente? SIM ou NÃO: ")); 
+            $num_adv = random_int(0, 100); 
+            $pontuacao = 100;            
         }
     }
 }
-while($numero != $num_adv);
+while($resposta == "SIM");
 
 ?>
