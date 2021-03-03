@@ -24,18 +24,22 @@ do{
         if($numero == $num_adv){
 
             $hist_pont[] = $pontuacao;
-
-            echo"----------------------------------------------------------------\n";
-            echo "Parabéns você acertou :)\nSua pontuação final foi: ".$pontuacao."\n";
-
-            if($pontuacao > (int) max($hist_pont)){            
+ 
+            if($pontuacao >= (double) max($hist_pont)){  
+                echo"----------------------------------------------------------------\n";  
+                echo "Parabéns você acertou :)\n";        
                 echo "NOVA PONTUAÇÃO!!!!!!!!! Sua pontuação agora é: ".$pontuacao."\n";
-            }
-            echo"----------------------------------------------------------------\n";
+                echo"----------------------------------------------------------------\n";
 
-            $resposta = strToUpper(readline("Deseja jogar novamente? SIM ou NÃO: ")); 
-            $num_adv = random_int(0, 100); 
-            $pontuacao = 100;            
+                $resposta = strToUpper(readline("Deseja jogar novamente? SIM ou NÃO: ")); 
+                $num_adv = random_int(0, 100); 
+                $pontuacao = 100;  
+            }else{
+                echo"----------------------------------------------------------------\n";
+                echo "Gamer Over :(\nVocê não conseguiu atingir uma maior pontuação\nSua pontuação final foi: ".$pontuacao."\nMaior pontuação: ".max($hist_pont)."\n";
+                echo"----------------------------------------------------------------\n";
+                $resposta = "NÂO";
+            }           
         }
     }
 }
