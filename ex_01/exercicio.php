@@ -1,6 +1,7 @@
 <?php
 
 $num_adv = random_int(0, 100);
+$pontuacao = 100;
 
 do{
     $numero = (int) readline("Informe um número: ");
@@ -9,16 +10,17 @@ do{
         echo "Por favor informe um número!\n";
     } else {
         if($numero > $num_adv){
-            echo "Você chutou muito alto. Tente um número menor!\n";            
+            echo $num_adv." Você chutou muito alto. Tente um número menor!\n";          
+            $pontuacao -= 0.2;  
         }
 
         if($numero < $num_adv){
-            echo "Você chutou muita baixo. Tente um número maior!\n";            
+            echo $num_adv." Você chutou muita baixo. Tente um número maior!\n";            
+            $pontuacao -= 0.2;
         }
 
         if($numero == $num_adv){
-            echo "Parabéns você acertou :)\n";
-            break;
+            echo "Parabéns você acertou :)\nSua pontuação final foi: ".$pontuacao."/100.\n";                    
         }
     }
 }
