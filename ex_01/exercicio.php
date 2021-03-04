@@ -2,7 +2,8 @@
 
 $num_adv = random_int(0, 100);
 $pontuacao = 100;
-$resposta = "SIM";
+$resposta = 1;
+$resposta_final = "SIM";
 $hist_pont = [];
 
 do{
@@ -31,18 +32,36 @@ do{
                 echo "NOVA PONTUAÇÃO!!!!!!!!! Sua pontuação agora é: ".$pontuacao."\n";
                 echo"----------------------------------------------------------------\n";
 
-                $resposta = strToUpper(readline("Deseja jogar novamente? SIM ou NÃO: ")); 
+                $resposta_final = strToUpper(readline("Deseja jogar novamente? SIM ou NÃO: ")); 
                 $num_adv = random_int(0, 100); 
                 $pontuacao = 100;  
             }else{
                 echo"----------------------------------------------------------------\n";
                 echo "Gamer Over :(\nVocê não conseguiu atingir uma maior pontuação\nSua pontuação final foi: ".$pontuacao."\nMaior pontuação: ".max($hist_pont)."\n";
                 echo"----------------------------------------------------------------\n";
-                $resposta = "NÂO";
+
+                do {
+                    $resposta = readline("Para iniciar o jogo novamente digite '1'. Para abrir o ranking da pontuação digite '2': ");
+                    if($resposta == 1){                    
+                        $num_adv = random_int(0, 100); 
+                        $pontuacao = 100;  
+                    }elseif($resposta == 2){
+                        echo "-----------------\n|  SEU RANKING  |\n-----------------\n";                                    
+            
+                        $count = 0;
+                        foreach($hist_pont as $p){
+                            $count ++;                        
+                            echo "".$count."°|".$p."        \n";                        
+                        }
+                        echo "-----------------\n";
+                        $resposta = readline("Para voltar pressione qualquer tecla! ");                                                
+                    }
+                }while($resposta != 1 || $resposta == 2);
             }           
         }
     }
 }
-while($resposta == "SIM");
+while($resposta_final == "SIM");
 
 ?>
+
