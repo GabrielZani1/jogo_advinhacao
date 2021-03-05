@@ -1,0 +1,16 @@
+99.6|Murilo
+99.4|Murilo
+99.8|Evandro
+99.4|Evandro
+99.8|Jorge
+99.8|Hiago
+99.8|Hiao
+99.8|Murilo
+99.8|Matias
+99.2|Murilo
+98.8|Karla
+99.4|Karla
+99.6|Karla
+99.2|Karla
+99.8|Ulisses
+99|Karla
