@@ -1,4 +1,11 @@
-99.4|Murilo
-99.8|Evandro
-99.8|zani
-99.8|Murilo
+99.8|Angela|00:01.81
+99.8|Souza|01:54.95
+99.2|Paulo|00:03.07
+98.6|Zani|00:03.39
+98.4|Gabriel Zani|00:07.10
+98.2|gabriel|00:04.44
+98.2|Gabriel Zani|03:13.07
+97.8|Paulo|00:03.71
+97.4|Paulo|00:03.95
+96|Paulo|00:06.18
+99.8|Zani|00:02.01
